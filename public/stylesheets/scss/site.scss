@@ -1,0 +1,21 @@
+.image-wrapper {
+  height: 100px;
+}
+
+.image-wrapper img {
+  height: 100%;
+}
+
+header{
+    background-color: #000;
+    height: 120px;
+    /*background: -moz-linear-gradient(100% 100% 90deg, #2F2727, #1a82f7);*/
+    /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));*/
+    background: -moz-radial-gradient(center 45deg, circle closest-corner, #1a82f7 0%, #2F2727 100%);
+    background: -webkit-gradient(radial, center center, 0, center center, 70, from(#1a82f7), to(#2F2727));
+
+}
+
+header img{
+    margin: auto;
+}
