@@ -1,0 +1,47 @@
+%li.contributor
+  - unless account.portraits.empty?
+    %ul.portraits
+      = render :partial => 'portrait', :collection => account.portraits
+    %section.basicDetails
+      .username
+        %dt
+          Username
+        %dd
+          %h2
+            = account.username
+
+      - unless account.names.empty?
+        .names
+          %dt
+            Names
+          %dd
+            %ul
+              = render :partial => 'name', :collection => account.names
+      - unless account.nicks.empty?
+        .nickNames
+          %dt
+            Nicknames
+          %dd
+            %ul
+              = render :partial => 'name', :collection => account.nicks
+
+  .details{:style => "display: none;"}
+    - unless account.sites.empty?
+      %ul
+        = render :partial => 'site', :collection => account.sites
+    - unless account.services.empty?
+      %ul
+        = render :partial => 'service', :collection => account.services
+    / FIXME: unsure how to link to ISBN. :-(
+    /
+      <haml:silent>     unless account.books.empty?
+      </haml:silent><haml:block>      <tr>
+      <td>Books:</td>
+      <td>
+      <ul>
+      <haml:silent>             account.books.each do |book|
+      </haml:silent><haml:block>              <li><haml:loud> book.key </haml:loud></li>
+      </haml:block>          </ul>
+      </td>
+      </tr>
+      </haml:block>

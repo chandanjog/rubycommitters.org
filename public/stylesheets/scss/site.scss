@@ -1,3 +1,27 @@
+@import './config.scss';
+
+@mixin highlight(){
+
+  background-image: -webkit-gradient(
+      linear,
+      left 0,
+      left 600,
+      color-stop(0.48, rgb(199,200,201)),
+      color-stop(0.9, rgb(140,138,140))
+  );
+  background-image: -moz-linear-gradient(
+      center 0,
+      rgb(199,200,201) 48%,
+      rgb(140,138,140) 90%
+  );
+
+}
+
+.highlighted{
+  @include highlight;
+}
+
+
 .image-wrapper {
   height: 100px;
 }
@@ -6,16 +30,138 @@
   height: 100%;
 }
 
+body{
+
+//    background: -moz-linear-gradient(100% 100% 90deg, #2F2727, #1a82f7);
+//    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));
+
+}
+
+
 header{
-    background-color: #000;
     height: 120px;
-    /*background: -moz-linear-gradient(100% 100% 90deg, #2F2727, #1a82f7);*/
-    /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));*/
-    background: -moz-radial-gradient(center 45deg, circle closest-corner, #1a82f7 0%, #2F2727 100%);
-    background: -webkit-gradient(radial, center center, 0, center center, 70, from(#1a82f7), to(#2F2727));
-
+    position: relative;
+    h1{
+      position: absolute;
+      top: 40px;
+      left: 150px;
+      color: #000;
+    }
 }
 
-header img{
+#main{
+  background-color: #fff;
+  -moz-box-shadow: 10px 10px 20px #000000;
+  -webkit-box-shadow: 10px 10px 20px #000000;
+
+  #container{
+    -moz-box-shadow: 10px 10px 20px #000000;
+    -webkit-box-shadow: 10px 10px 20px #000000;
     margin: auto;
+    width: 960px;
+    background-color: #e2e2e2;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    position: relative;
+
+    #left{
+      width: 480px;
+      border-right: 1px solid #4d4d4d;
+
+      ul{
+        margin: 0;
+        
+        
+        li.contributor{
+          margin: 5px;
+          position: relative;
+          cursor: pointer;
+          border-bottom: 1px dotted #2e2e2e;
+          -moz-border-radius: 15px;
+          border-radius: 15px;
+
+          &:hover{
+            @include highlight;
+              
+          }
+
+          .portraits{
+            display: inline-block;
+
+            a.image{
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+
+              img{
+                height: 100px;
+                width: 100px;
+                margin: 10px;
+                border: 8px solid #f2f2f2;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+              }
+            }
+          }
+
+          .basicDetails{
+            position: absolute;
+            top: 10px;
+            left: 150px;
+            display: inline-block;
+            dt{
+              display: inline-block;
+              width: 95px;
+              color: #d23525;
+              color: #9f352a;
+              color: #b03c30;
+            }
+            dd{
+              display: inline;
+              h2{
+                display: inline-block;
+              }
+              ul{
+                display: inline-block;
+              }
+            }
+            .names{
+              position: relative;
+
+              dt{
+//                position: absolute;
+//                top: 0px;
+              }
+              dd{
+//                position: absolute;
+//                left: 95px;
+//                top: 0px;
+              }
+            }
+          }
+
+
+          .details{
+
+          }
+        }
+      }
+    }
+
+    #contributorDetailsSlider{
+      position: absolute;
+      left: 480px;
+      top: 0px;
+      width: 400px;
+      @include highlight;
+          
+    }
+
+
+    #right{
+      width: 480px;
+      background-color: red;
+    }
+    
+  }
 }
+
