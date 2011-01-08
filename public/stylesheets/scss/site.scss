@@ -2,24 +2,39 @@
 
 @mixin highlight(){
 
-  background-image: -webkit-gradient(
-      linear,
-      left 0,
-      left 600,
-      color-stop(0.48, rgb(199,200,201)),
-      color-stop(0.9, rgb(140,138,140))
-  );
-  background-image: -moz-linear-gradient(
-      center 0,
-      rgb(199,200,201) 48%,
-      rgb(140,138,140) 90%
-  );
+//  background-image: -webkit-gradient(
+//      linear,
+//      left 0,
+//      left 600,
+//      color-stop(0.48, rgb(199,200,201)),
+//      color-stop(0.9, rgb(140,138,140))
+//  );
+//  background-image: -moz-linear-gradient(
+//      center 0,
+//      rgb(199,200,201) 48%,
+//      rgb(140,138,140) 90%
+//  );
+
+  background-color: #c4c4c4;
 
 }
 
 .highlighted{
   @include highlight;
 }
+
+.selected{
+  background-color: #e4c4c4;
+}
+
+.rightArrow{
+  background: transparent url('/images/fancy_nav_right.png') no-repeat 0 0;
+}
+
+.leftArrow{
+  background: transparent url('/images/fancy_nav_left.png') no-repeat 0 0;
+}
+
 
 
 .image-wrapper {
@@ -67,6 +82,7 @@ header{
     #left{
       width: 480px;
       border-right: 1px solid #4d4d4d;
+      display: inline-block;
 
       ul{
         margin: 0;
@@ -111,9 +127,8 @@ header{
             dt{
               display: inline-block;
               width: 95px;
-              color: #d23525;
-              color: #9f352a;
               color: #b03c30;
+              font-size: 0.85em;              
             }
             dd{
               display: inline;
@@ -139,9 +154,12 @@ header{
             }
           }
 
-
-          .details{
-
+          .toggleImage{
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            top: 10px;
+            right: 12px;
           }
         }
       }
@@ -152,14 +170,21 @@ header{
       left: 480px;
       top: 0px;
       width: 400px;
+      height: 800px;
+      z-index: 1000;
       @include highlight;
           
     }
 
 
     #right{
-      width: 480px;
-      background-color: red;
+      width: 460px;
+      margin: 0 0 0 20px;
+      background-color: #e2e2e2;
+      position: absolute;
+      left: 480px;
+      top: 0px;
+      height: 400px;
     }
     
   }

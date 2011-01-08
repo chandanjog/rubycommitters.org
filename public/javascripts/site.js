@@ -2,31 +2,79 @@
 (function($) {
   $(document).ready(function() {
 
-    var selectedContributor;
+    var selectedContributor = undefined;
 
     $('li.contributor').each(function(index,contributor){
-        
+
         $(contributor).bind('click',function(){
+
             var self = $(this);
+
+            if(selectedContributor === undefined){
+                self.addClass('selected');
+                self.find('.toggleImage').addClass('leftArrow');
+                $('#contributorDetailsSlider').append(self.find('.details').clone().show()).animate({ width: 'toggle'});
+                $('#contributorDetailsSlider').addClass('open');
+            }
+
+            if(selectedContributor  !== undefined && selectedContributor[0] != self[0]){
+                selectedContributor.removeClass('selected');
+                selectedContributor.find('.toggleImage').removeClass('leftArrow');
+
+                self.addClass('selected');
+                self.find('.toggleImage').addClass('leftArrow');
+
+                $('#contributorDetailsSlider').empty();
+                if($('#contributorDetailsSlider').hasClass('open')){
+                    $('#contributorDetailsSlider').append(self.find('.details').clone().show());
+                }
+                else{
+                    $('#contributorDetailsSlider').append(self.find('.details').clone().show()).animate({width: 'toggle'});
+                    $('#contributorDetailsSlider').addClass('open')
+                }
+            }
+
+            if(selectedContributor  !== undefined && selectedContributor[0] === self[0]){
+                selectedContributor.removeClass('selected');
+                selectedContributor.find('.toggleImage').removeClass('leftArrow');
+
+                $('#contributorDetailsSlider').animate({width: 'toggle'});
+                if($('#contributorDetailsSlider').hasClass('open')){
+                    $('#contributorDetailsSlider').removeClass('open');
+                }
+                else{
+                    $('#contributorDetailsSlider').addClass('open');
+                }
+            }
+
             selectedContributor = self;
-            $('#contributorDetailsSlider').append(self.find('.details').show()).show();
+
+        });
+        
+
+        $(contributor).bind('mouseover',function(){
+            var self = $(this);
+            self.find('.toggleImage').addClass('rightArrow');
             self.addClass('highlighted');
 
         });
 
-//        $(contributor).click(function(){
-//            var self = $(this);
-//            self.find('.details').show();
-//            self.addClass('highlighted');
-//        });
+        $(contributor).bind('mouseout',function(){
+            var self = $(this);
+            self.find('.toggleImage').removeClass('rightArrow');
+            self.removeClass('highlighted');
+        });
 
     });
 
 
     $('#contributorDetailsSlider').click(function(){
         var self = $(this);
-        self.hide();
+        self.animate({width: 'toggle'});
         selectedContributor.removeClass('highlighted');
+        selectedContributor.find('.toggleImage').removeClass('leftArrow');
+        selectedContributor.removeClass('selected');
+        $('#contributorDetailsSlider').removeClass('open')        
         
     });
 
