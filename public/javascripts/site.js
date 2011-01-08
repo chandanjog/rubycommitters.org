@@ -35,15 +35,19 @@
             }
 
             if(selectedContributor  !== undefined && selectedContributor[0] === self[0]){
-                selectedContributor.removeClass('selected');
-                selectedContributor.find('.toggleImage').removeClass('leftArrow');
+//                selectedContributor.removeClass('selected');
+//                selectedContributor.find('.toggleImage').removeClass('leftArrow');
 
                 $('#contributorDetailsSlider').animate({width: 'toggle'});
                 if($('#contributorDetailsSlider').hasClass('open')){
                     $('#contributorDetailsSlider').removeClass('open');
+                    self.find('.toggleImage').removeClass('leftArrow');
+                    self.removeClass('selected');
                 }
                 else{
                     $('#contributorDetailsSlider').addClass('open');
+                    self.find('.toggleImage').addClass('leftArrow');
+                    self.addClass('selected');
                 }
             }
 
