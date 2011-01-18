@@ -1,0 +1,38 @@
+#contributorDetailsSlider{
+  position: fixed;
+  top: 40px;
+  right: 0px;
+  width: 100%;
+  z-index: 1000;
+
+  .holder{
+    position: relative;
+    margin: auto;
+    width: 960px;
+
+    .close{
+      position: absolute;
+      top: -11px;
+      left: 902px;
+      z-index: 1001;
+      cursor: pointer;
+    }
+
+    .content{
+      position: relative;
+      margin: auto;
+      width: 960px;
+
+      .details{
+        position: absolute;
+        top: 0px;
+        left: 480px;
+        width:400px;
+        height: 500px;
+        padding: 20px;
+        @include highlight;
+      }
+
+    }
+  }
+}

@@ -1,23 +1,7 @@
 @import './config.scss';
+@import './contributorDetails.scss';
 
-@mixin highlight(){
 
-//  background-image: -webkit-gradient(
-//      linear,
-//      left 0,
-//      left 600,
-//      color-stop(0.48, rgb(199,200,201)),
-//      color-stop(0.9, rgb(140,138,140))
-//  );
-//  background-image: -moz-linear-gradient(
-//      center 0,
-//      rgb(199,200,201) 48%,
-//      rgb(140,138,140) 90%
-//  );
-
-  background-color: #c4c4c4;
-
-}
 
 .highlighted{
   @include highlight;
@@ -53,23 +37,15 @@ body{
 }
 
 
-header{
-    height: 120px;
-    position: relative;
-    h1{
-      position: absolute;
-      top: 40px;
-      left: 150px;
-      color: #000;
-    }
-}
 
 #main{
-  background-color: #fff;
-  -moz-box-shadow: 10px 10px 20px #000000;
-  -webkit-box-shadow: 10px 10px 20px #000000;
+//  background-color: #fff;
+//  -moz-box-shadow: 10px 10px 20px #000000;
+//  -webkit-box-shadow: 10px 10px 20px #000000;
+  margin: 40px 0 0 0;
 
   #container{
+
     -moz-box-shadow: 10px 10px 20px #000000;
     -webkit-box-shadow: 10px 10px 20px #000000;
     margin: auto;
@@ -78,11 +54,26 @@ header{
     -moz-border-radius: 15px;
     border-radius: 15px;
     position: relative;
+    background: url('/images/bgtex.jpg') repeat 0 0;
 
     #left{
       width: 480px;
       border-right: 1px solid #4d4d4d;
       display: inline-block;
+
+      .actions{
+        height: 30px;
+        padding: 10px;
+        background-color: #000;
+        background-color: #8B1417;
+        -moz-border-radius: 15px 0 0 0;
+        border-radius: 15px 0 0 0;
+
+//        -moz-box-shadow: 0px 0px 10px #000000;
+//        -moz-box-shadow: 10px 10px 20px #000000;
+//        -webkit-box-shadow: 10px 10px 20px #000000;
+
+      }
 
       ul{
         margin: 0;
@@ -165,28 +156,32 @@ header{
       }
     }
 
-    #contributorDetailsSlider{
-      position: absolute;
-      left: 480px;
-      top: 0px;
-      width: 400px;
-      height: 800px;
-      z-index: 1000;
-      @include highlight;
-          
-    }
 
 
     #right{
       width: 460px;
       margin: 0 0 0 20px;
-      background-color: #e2e2e2;
+//      background-color: #e2e2e2;
       position: absolute;
       left: 480px;
       top: 0px;
       height: 400px;
+
+
+      header{
+        height: 120px;
+        position: relative;
+        border-bottom: 1px solid #000;
+        h1{
+          position: absolute;
+          top: 40px;
+          left: 150px;
+          color: #000;
+        }
+      }
     }
-    
+
   }
+
 }
 

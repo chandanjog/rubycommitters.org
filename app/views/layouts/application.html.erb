@@ -41,29 +41,39 @@
 
 <body>
 
-  <div id="container">
-    <header>
-        <img src="/images/logo.png" alt="logo"/>
-        <h1>Ruby Committers</h1>
-    </header>
-
     <section id="main">
         <section id="container">
             <section id="left">
+                <section class="actions">
+                    <!--<input type="text" value="Search by Username"/>-->
+                    <img src="/images/fancy_nav_left.png" alt="previous"/>
+                    <img src="/images/fancy_nav_right.png" alt="next"/>
+                </section>
                 <%= yield %>
             </section>
-            <section id="contributorDetailsSlider" style="display:none;">
-            </section>
+
             <section id="right">
-                lorem ipsum dolor
+              <header>
+                  <img src="/images/logo.png" alt="logo"/>
+                  <h1>Ruby Committers</h1>
+              </header>
+              lorem ipsum dolor
             </section>
         </section>
     </section>
     
+    <section id="contributorDetailsSlider">
+        <section class="holder">
+          <img src='/images/fancy_close.png' alt="close" class="close" style="display:none;"/>
+          <section class="content" style="display:none;">
+          </section>
+        </section>  
+    </section>
+    
+
     <footer>
 
     </footer>
-  </div> <!--! end of #container -->
 
 
   <!-- Javascript at the bottom for fast page loading -->
