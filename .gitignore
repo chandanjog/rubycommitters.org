@@ -5,6 +5,6 @@ tmp/**/*
 .DS_Store
 .idea/*
 public/images/ruby-programming-icons-by-ahmad-galal/*
-public/stylesheets/*.css
+
 .css
 .sass-cache/*

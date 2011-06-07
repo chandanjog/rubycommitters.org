@@ -1,0 +1,152 @@
+body {
+  font-size: 15px;
+  background: url("/images/dark_noise.png") repeat 0 0; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1em; }
+
+h4 {
+  font-size: 0.5em; }
+
+ul {
+  list-style-type: none; }
+
+#contributorDetailsSlider {
+  position: fixed;
+  top: 40px;
+  right: 0px;
+  width: 100%;
+  z-index: 1000; }
+  #contributorDetailsSlider .holder {
+    position: relative;
+    margin: auto;
+    width: 960px; }
+    #contributorDetailsSlider .holder .close {
+      position: absolute;
+      top: -11px;
+      left: 902px;
+      z-index: 1001;
+      cursor: pointer; }
+    #contributorDetailsSlider .holder .content {
+      position: relative;
+      margin: auto;
+      width: 960px; }
+      #contributorDetailsSlider .holder .content .details {
+        position: absolute;
+        top: 0px;
+        left: 480px;
+        width: 400px;
+        height: 500px;
+        padding: 20px;
+        background-color: #ededed; }
+
+.highlighted {
+  background-color: #ededed; }
+
+.selected {
+  background-color: #e4c4c4; }
+
+.rightArrow {
+  background: transparent url("/images/fancy_nav_right.png") no-repeat 0 0; }
+
+.leftArrow {
+  background: transparent url("/images/fancy_nav_left.png") no-repeat 0 0; }
+
+.image-wrapper {
+  height: 100px; }
+
+.image-wrapper img {
+  height: 100%; }
+
+#main {
+  margin: 40px 0 0 0; }
+  #main #container {
+    -moz-box-shadow: 10px 10px 20px #000000;
+    -webkit-box-shadow: 10px 10px 20px #000000;
+    margin: auto;
+    width: 960px;
+    background-color: #e2e2e2;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    position: relative;
+    background: url("/images/bgtex.jpg") repeat 0 0; }
+    #main #container #left {
+      width: 480px;
+      border-right: 1px solid #4d4d4d;
+      display: inline-block; }
+      #main #container #left .actions {
+        height: 30px;
+        padding: 10px;
+        background-color: #000;
+        background-color: #8B1417;
+        -moz-border-radius: 15px 0 0 0;
+        border-radius: 15px 0 0 0; }
+      #main #container #left ul {
+        margin: 0; }
+        #main #container #left ul li.contributor {
+          margin: 5px;
+          position: relative;
+          cursor: pointer;
+          border-bottom: 1px dotted #2e2e2e;
+          -moz-border-radius: 15px;
+          border-radius: 15px; }
+          #main #container #left ul li.contributor:hover {
+            background-color: #ededed; }
+          #main #container #left ul li.contributor .portraits {
+            display: inline-block; }
+            #main #container #left ul li.contributor .portraits a.image {
+              -moz-border-radius: 10px;
+              border-radius: 10px; }
+              #main #container #left ul li.contributor .portraits a.image img {
+                height: 100px;
+                width: 100px;
+                margin: 10px;
+                border: 8px solid #f2f2f2;
+                -moz-border-radius: 10px;
+                border-radius: 10px; }
+          #main #container #left ul li.contributor .basicDetails {
+            position: absolute;
+            top: 10px;
+            left: 150px;
+            display: inline-block; }
+            #main #container #left ul li.contributor .basicDetails dt {
+              display: inline-block;
+              width: 95px;
+              color: #b03c30;
+              font-size: 0.85em; }
+            #main #container #left ul li.contributor .basicDetails dd {
+              display: inline; }
+              #main #container #left ul li.contributor .basicDetails dd h2 {
+                display: inline-block; }
+              #main #container #left ul li.contributor .basicDetails dd ul {
+                display: inline-block; }
+            #main #container #left ul li.contributor .basicDetails .names {
+              position: relative; }
+          #main #container #left ul li.contributor .toggleImage {
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            top: 10px;
+            right: 12px; }
+    #main #container #right {
+      width: 460px;
+      margin: 0 0 0 20px;
+      position: absolute;
+      left: 480px;
+      top: 0px;
+      height: 400px; }
+      #main #container #right header {
+        height: 120px;
+        position: relative;
+        border-bottom: 1px solid #000; }
+        #main #container #right header h1 {
+          position: absolute;
+          top: 40px;
+          left: 150px;
+          color: #000; }
