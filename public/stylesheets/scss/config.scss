@@ -1,28 +1,5 @@
 @mixin highlight(){
-
-
   background-color: #ededed;
-  background-image:
-  	-webkit-gradient(linear, 100% 0%, 0% 100%,
-  	from(transparent),
-  	color-stop(0.15, transparent),
-  	color-stop(0.15, #c4c4c4),
-  	color-stop(0.50, #c4c4c4),
-  	color-stop(0.50, transparent),
-  	color-stop(0.65, transparent),
-  	color-stop(0.65, #c4c4c4),
-  	to(#c4c4c4));
-
-  background-image: -moz-linear-gradient(#c4c4c4 50%, transparent 50%, transparent);
-
-  -webkit-background-size: 10px 10px;
-  -moz-background-size: 2px 2px;
-  background-size: 10px 10px;  
-
-//  filter:alpha(opacity=80);
-//  -moz-opacity:0.8;
-//  -khtml-opacity: 0.8;
-//  opacity: 0.8;
   
 }
 
@@ -30,29 +7,8 @@
 
 body{
   font-size: 15px;
-//  background-color: #fff;
-//  background-color: #e2e2e2;
-//  background-color: #D9D3CF;
-//  background-color: #C52F24;
-  
-  background-color: #8B1417;
-//  background-color: #b80810;
-  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
-//  background-image: -moz-linear-gradient(45deg, #555555 25%, transparent 25%, transparent), -moz-linear-gradient(-45deg, #555555 25%, transparent 25%, transparent), -moz-linear-gradient(45deg, transparent 75%, #555555 75%), -moz-linear-gradient(-45deg, transparent 75%, #555555 75%);
 
-  -moz-background-size: 40px 80px;
-
-//  background: url('/images/brick013.jpg') repeat 0 0;
-//  background: url('/images/brick002.jpg') repeat 0 0;
-//  background: url('/images/bgtex.jpg') repeat 0 0;
-
-//  background: url('/images/dark_noise.png') repeat 0 0;
-  background-color: #000;
-//  background: url('/images/dgrey062.gif') repeat 0 0;
-//  background: url('/images/red015.jpg') repeat 0 0;
-//  background: #8B1417 url('/images/bottom-gradient.gif') repeat-x center bottom;
-//  background: url('/images/bottom-gradient.gif') repeat;
-//  background-size: 50px 50px;
+  background: url('/images/dark_noise.png') repeat 0 0;
 }
 
 h1{
